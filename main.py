@@ -1,32 +1,16 @@
-#Pamela Vishka
-def encode(password):
-  pwEncoded = ""                      # empty string to store new pw
+# This is a sample Python script.
 
-  for i in password:                  # iterates through each digit in password
-    newNum = int(i) + 3               # adds 3 to each digit
-    if newNum == 10:
-      newNum = 0                      # accounting for double digits (10, 11, 12)
-    elif newNum == 11:
-      newNum = 1
-    elif newNum == 12:
-      newNum = 2
-    pwEncoded += str(newNum)          # adding each new digit to pwEncoded
+# Press ⌃R to execute it or replace it with your code.
+# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
 
+def print_hi(name):
+    # Use a breakpoint in the code line below to debug your script.
+    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
 
 
-if __name__ == "__main__":
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    print_hi('PyCharm')
 
-  while True:
-    print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\n') #menu that is printed out
-    option = int(input('Please enter an option: '))      # user input
-    if option != 3:
-          if option == 1: # encode password
-            password = input("Please enter your password to encode: ")
-            encodedPW = encode(password)
-            print('Your password has been encoded and stored!')
-          if option == 2:
-            original = decode(encodedPW)
-            print(f'The encoded password is {encodedPW}, and the original password is {password}')
-          if option == 3: #quit
-            break
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
