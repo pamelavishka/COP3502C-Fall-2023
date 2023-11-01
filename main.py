@@ -15,6 +15,20 @@ def encode(password):
   return pwEncoded
 
 
+def decode(password): #this function decodes the password that was previously encoded
+  original = ""
+  for i in password:
+    num = int(i) - 3
+    if num == (-1):
+      num = 9
+    elif num == (-2):
+      num == 8
+    elif num == (-3):
+      num = 7
+      original += str(num)
+    return original
+
+
 if __name__ == "__main__":
 
   while True:
